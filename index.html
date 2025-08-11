@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>智慧藥物健康管理系統</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <input id="main-title" value="🧠 智慧藥物健康管理系統  " />
+  </header>
+
+  <section id="user-selector"></section>
+
+
+  <section id="medication-list"></section>
+
+  <button id="dispense-button">💊 出藥</button>
+  <button id="settings-button">⚙️</button>
+
+  <div id="edit-area" class="hidden">
+  <h3>編輯模式</h3>
+
+  <div id="add-user-area">
+    <input id="new-user" placeholder="新增成員名稱" />
+    <button onclick="addUser()">➕ 新增成員</button>
+  </div>
+
+  <form id="edit-form">
+  <label>類型：
+    <select name="type">
+      <option value="藥物">💊 藥物</option>
+      <option value="營養品">🍎 營養品</option>
+    </select>
+  </label><br><br>
+  <label>時間：<input type="time" name="time" required></label><br><br>
+  <label>名稱：<input type="text" name="items" required></label><br><br>
+  <label>數量：<input type="number" name="pills" min="1" required></label><br><br>
+  <button type="submit">✅ 新增項目</button>
+</form>
+
+  <div id="edit-list"></div>
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
